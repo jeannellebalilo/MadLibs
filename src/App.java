@@ -1,29 +1,70 @@
+import java.awt.BorderLayout;
+import java.awt.CardLayout;
+import java.awt.FlowLayout;
 import java.util.*;
+import javax.swing.*;
 
 public class App {
     public static void main(String[] args) throws Exception {
 
+        new MyFrame();
+
+        // CardLayout cardLayout;
+        // JPanel cards = new JPanel(cardLayout = new CardLayout());
+
+        // // ------------------- card1 ---------------------
+        // JPanel card1 = new JPanel();
+
+        // JPanel cPanel1 = new JPanel();
+        // cPanel1.add(new JLabel("Choose a story:"));
+
+        // JPanel cPanel2 = new JPanel();
+        // JButton button1 = new JButton("Spooky Stories");
+        // JButton button2 = new JButton("Love Letter");
+        // JButton button3 = new JButton("The Space Shuttle");
+
+        // cPanel2.add(button1);
+        // cPanel2.add(button2);
+        // cPanel2.add(button3);
+
+        // card1.add(cPanel1, BorderLayout.NORTH);
+        // card1.add(cPanel2, BorderLayout.SOUTH);
+
+        // // ------------------- card2 ---------------------
+        // JPanel card2 = new JPanel();
+
+        // card2.add(new JLabel("Spooky Stories!!"));
+
+        // // ------------------------------------------------
+
+        // cards.add(card1);
+        // cards.add(card2);
+
+        // cardLayout.show(cards, "CARD 1");
+
+        // button1.addActionListener(e -> cardLayout.show(cards, "CARD 2"));
+
         Queue<String> words = new LinkedList<>();
 
-        Scanner scan = new Scanner(System.in);
-        String story = null;
+        // Scanner scan = new Scanner(System.in);
+        // String story = null;
 
-        System.out.print("1: Spooky Stories\n" + 
-                        "2: Love Letter\n" + 
-                        "3: The Space Shuttle\n" +
-                        "Type a number to choose a story: ");
-        int choice = scan.nextInt();
-        scan.nextLine();
+        // System.out.print("1: Spooky Stories\n" + 
+        //                 "2: Love Letter\n" + 
+        //                 "3: The Space Shuttle\n" +
+        //                 "Type a number to choose a story: ");
+        // int choice = scan.nextInt();
+        // scan.nextLine();
 
-        switch (choice) {
-            case 1: story = spookyStories(scan, words);
-                    break;
-            case 2: story = loveLetter(scan, words);
-                    break;
-            case 3: story = spaceShuttle(scan, words);
-        }
+        // switch (choice) {
+        //     case 1: story = spookyStories(scan, words);
+        //             break;
+        //     case 2: story = loveLetter(scan, words);
+        //             break;
+        //     case 3: story = spaceShuttle(scan, words);
+        // }
 
-        System.out.print("\n" + story);
+        // System.out.print("\n" + story);
 
         // words.add(getWord(scan, "adjective"));
         // words.add(getWord(scan, "noun"));
@@ -45,6 +86,7 @@ public class App {
     }
 
 static String spookyStories(Scanner scan, Queue<String> words) {
+        System.out.print("\n");
         words.add(getWord(scan, "adjective"));
         words.add(getWord(scan, "plural noun"));
         words.add(getWord(scan, "plural noun"));
@@ -79,6 +121,7 @@ static String spookyStories(Scanner scan, Queue<String> words) {
     }
 
     static String loveLetter(Scanner scan, Queue<String> words) {
+        System.out.print("\n");
         words.add(getWord(scan, "adjective"));
         words.add(getWord(scan, "noun"));
         words.add(getWord(scan, "noun"));
@@ -136,6 +179,7 @@ static String spookyStories(Scanner scan, Queue<String> words) {
     }
 
     static String spaceShuttle(Scanner scan, Queue<String> words) {
+        System.out.print("\n");
         words.add(getWord(scan, "noun"));
         words.add(getWord(scan, "plural noun"));
         words.add(getWord(scan, "verb ending in \"ing\""));
